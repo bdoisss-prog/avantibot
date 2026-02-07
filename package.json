@@ -1,0 +1,23 @@
+{
+  "name": "avantibot",
+  "version": "1.0.0",
+  "description": "Bot de notícias do Palmeiras para WhatsApp",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "palmeiras",
+    "bot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pino": "^8.20.0",
+    "qrcode-terminal": "^0.12.0",
+    "rss-parser": "^3.13.0",
+    "whatsapp-web.js": "^1.34.6"
+  }
+}
