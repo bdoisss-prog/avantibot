@@ -31,8 +31,16 @@ export default {
     // Configurações de Intervalo
     pollingIntervalMinutes: 30, // Verificar notícias a cada 30 minutos
 
-    // Limite de histórico para evitar reenvios
-    maxHistorySize: 100,
+    // Limite de histórico para evitar reenvios (guarda títulos para evitar duplicatas de blogs diferentes)
+    maxHistorySize: 200,
+
+    // Configurações de Horário e Limites Diários
+    scheduler: {
+        startHour: 8,       // Começa às 08:00
+        endHour: 22,        // Para às 22:00
+        morningLimit: 4,    // 4 notícias de manhã (08:00 - 12:00)
+        afternoonLimit: 4   // 4 notícias de tarde (12:00 - 18:00)
+    },
 
     // Intervalo entre envio de cada notícia (em segundos)
     messageDelaySeconds: 900 // 15 minutos
