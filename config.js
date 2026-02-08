@@ -1,15 +1,15 @@
 export default {
+    // Última atualização: 08/02/2026 16:06
     // Configurações do Bot
-    groupJid: "120363423291834782@g.us", // JID do grupo do WhatsApp onde as notícias serão enviadas. O bot logará esse ID ao iniciar.
+    groupJid: "120363423291834782@g.us",
 
     // Configurações de Busca
     search: {
-        useGoogleNews: false, // Definido como false para buscar APENAS dos links abaixo
+        useGoogleNews: false,
         query: "Palmeiras",
         lang: "pt-BR",
         country: "BR",
         ceid: "BR:pt",
-        // Lista exclusiva de feeds solicitada
         additionalRssFeeds: [
             "https://ptd.verdao.net/feed/",
             "https://nossopalestra.com.br/feed/",
@@ -28,20 +28,15 @@ export default {
         ]
     },
 
-    // Configurações de Intervalo
-    pollingIntervalMinutes: 30, // Verificar notícias a cada 30 minutos
-
-    // Limite de histórico para evitar reenvios (guarda títulos para evitar duplicatas de blogs diferentes)
+    pollingIntervalMinutes: 30,
     maxHistorySize: 200,
 
-    // Configurações de Horário e Limites Diários
     scheduler: {
-        startHour: 8,       // Começa às 08:00
-        endHour: 22,        // Para às 22:00
-        morningLimit: 4,    // 4 notícias de manhã (08:00 - 12:00)
-        afternoonLimit: 4   // 4 notícias de tarde (12:00 - 18:00)
+        startHour: 8,
+        endHour: 22,
+        morningLimit: 4,
+        afternoonLimit: 4
     },
 
-    // Intervalo entre envio de cada notícia (em segundos)
-    messageDelaySeconds: 900 // 15 minutos
+    messageDelaySeconds: 900
 };
