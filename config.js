@@ -10,27 +10,18 @@ export default {
         lang: "pt-BR",
         country: "BR",
         ceid: "BR:pt",
+        // Lista exclusiva: apenas Palmeiras Todo Dia
         additionalRssFeeds: [
-            "https://ptd.verdao.net/feed/",
-            "https://nossopalestra.com.br/feed/",
-            "https://palmeirasonline.com/feed/",
-            "https://www.mondopalmeiras.net/feed/",
-            "https://anythingpalmeiras.com/feed/",
-            "https://arquivospalmeiras.blogspot.com/feeds/posts/default?alt=rss",
-            "https://se-palmeiras.webnode.page/rss/all.xml",
-            "https://se-palmeiras.webnode.page/rss/noticias.xml",
-            "https://palmeiras-noticias5.webnode.page/rss/all.xml",
-            "https://palmeiras-noticias5.webnode.page/rss/noticias.xml",
-            "https://palmeiras-noticias5.webnode.page/rss/blog.xml",
-            "https://tudopalmeiras.webnode.page/rss/all.xml",
-            "https://tudopalmeiras.webnode.page/rss/brasileir%c3%a3o%202008.xml",
-            "https://tudopalmeiras.webnode.page/rss/links-relacionados.xml"
+            "https://ptd.verdao.net/feed/"
         ]
     },
 
-    pollingIntervalMinutes: 30,
+    // Configurações de Intervalo
+    pollingIntervalMinutes: 60, // Verificar a cada 1 hora
+    // Limite de histórico para evitar reenvios
     maxHistorySize: 200,
 
+    // Configurações de Horário e Limites Diários
     scheduler: {
         startHour: 8,
         endHour: 22,
@@ -38,5 +29,7 @@ export default {
         afternoonLimit: 4
     },
 
-    messageDelaySeconds: 900
+    // Intervalo entre envio de cada notícia (em segundos)
+    // Aumentado para 3600 (1 hora) para espaçar melhor durante o período
+    messageDelaySeconds: 3600
 };
